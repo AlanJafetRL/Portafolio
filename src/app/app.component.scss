@@ -1,0 +1,216 @@
+@use '@angular/material' as mat;
+
+//-- Animaciones --//
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 10%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+@keyframes movimiento_scroll {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(100px);
+    }
+}
+
+/* section {
+    view-timeline-name: --reveal;
+
+    animation-name: movimiento_scroll;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+} */
+
+//-- Globales --//
+h1 {
+    font: var(--mat-sys-display-large);
+}
+
+h2 {
+    font: var(--mat-sys-display-medium);
+}
+
+.texto-grande {
+    font: var(--mat-sys-title-large);
+}
+
+//-- Estilos --//
+
+.total {
+    height: 100vh;
+}
+
+.cuadro-superior {
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+    mat-toolbar {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        background: var(--mat-sys-primary);
+        color: var(--mat-sys-on-primary);
+        box-shadow: var(--mat-sys-level5);
+        border-radius: 20px;
+        width: auto;
+
+        .nav {
+            //background: green;
+            display: flex;
+            align-items: center;
+
+            &-items {
+                //background: red;
+                background: var(--mat-sys-primary);
+                color: var(--mat-sys-on-primary);
+                box-shadow: var(--mat-sys-level4);
+                margin: 15px;
+                width: auto;
+
+                &_text {
+                    color: var(--mat-sys-on-primary);
+                }
+            }
+
+            .activated {
+                box-shadow: var(--mat-sys-level0);
+            }
+        }
+
+    }
+
+}
+
+mat-sidenav-container {
+    height: 100vh;
+
+    .content {
+        height: 100%;
+        border: 0;
+        margin: 0;
+        display: grid;
+        scroll-behavior: smooth;
+
+        #seccion-1 {
+            background: var(--mat-sys-primary-container);
+
+            .fondo-inicio {
+                height: 800px;
+                box-shadow: var(--mat-sys-level5);
+                background: var(--mat-sys-primary);
+                color: var(--mat-sys-on-primary);
+
+                border-bottom-left-radius: 30% 15px;
+                border-bottom-right-radius: 90% 25%;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                .logos-trabajo {
+                    //background: red;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+
+                    div {
+                        padding: 10px 10px 0 10px;
+
+                        img {
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #seccion-2 {
+            background: var(--mat-sys-surface);
+
+            .fondo-sobremi {
+                height: 800px;
+                box-shadow: var(--mat-sys-level5);
+                background: var(--mat-sys-primary-container);
+                color: var(--mat-sys-on-primary-container);
+
+                border-bottom-left-radius: 90% 25%;
+                border-bottom-right-radius: 30% 15px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                .contenedor-sobremi {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: left;
+
+                    width: 60%;
+
+                    &__tecnologias {
+                        display: inline;
+                        justify-content: center;
+                        text-align: center;
+                        flex-grow: 1;
+                        flex-basis: 200;
+
+                        button {
+                            margin: 3px;
+                        }
+                    }
+                }
+            }
+        }
+
+        /*  #seccion-3 {
+            background: var(--mat-sys-surface);
+
+            .fondo-tecnologias {
+                height: 500px;
+            }
+
+        } */
+
+        #seccion-3 {
+            background: var(--mat-sys-surface);
+
+            .fondo-proyectos {
+                height: 800px;
+                //background: var(--mat-sys-surface-dim);
+            }
+        }
+
+        #seccion-4 {
+            background: var(--mat-sys-inverse-surface);
+            color: var(--mat-sys-inverse-on-surface);
+            height: 800px;
+            border-radius: 25px 25px 0 0;
+            box-shadow: var(--mat-sys-level5);
+        }
+
+    }
+}
