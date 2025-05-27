@@ -1,13 +1,30 @@
 <div class="total">
     <div class="cuadro-superior">
-        <mat-toolbar style="z-index: 10;">
+        <mat-toolbar style="z-index: 11;">
             <mat-nav-list class="nav">
                 <a mat-list-item class="nav-items" *ngFor="let item of menuItems()" href="#{{item.section}}"
                     [class.activated]="seccionActiva == item.section">
                     <span matListItemTitle class="nav-items_text">{{item.label}}</span>
                 </a>
             </mat-nav-list>
+
         </mat-toolbar>
+
+        <a class="nav__target" (click)="toggleMenu()">
+            <button mat-fab class="btn-menu"> <mat-icon>menu</mat-icon> </button>
+        </a>
+
+        <div class="nav__links" *ngIf="menuAbierto" [class.menu-anim-show]="menuAbierto"
+            [class.menu-anim-hide]="!menuAbierto">
+            <mat-nav-list class="nav">
+                <a mat-list-item class="nav-items" *ngFor="let item of menuItems()" href="#{{item.section}}"
+                    [class.activated]="seccionActiva == item.section" (click)="toggleMenu()">
+                    <span matListItemTitle class="nav-items_text">{{item.label}}</span>
+                </a>
+            </mat-nav-list>
+
+        </div>
+
     </div>
 
     <mat-sidenav-container>
@@ -36,7 +53,7 @@
 
             <section id="seccion-2" style="height: auto; z-index: 8;">
                 <div class="fondo-sobremi">
-                    <h2>Sobre mi</h2>
+                    <h2>Sobre mí</h2>
                     <div class="contenedor-sobremi">
                         <p class="texto-grande">
                             Soy Alan Jafet Rojas López. <br>
@@ -52,62 +69,61 @@
                             equipos y proyectos en los que participo.
                         </p>
                         <div class="contenedor-sobremi__tecnologias">
-                            
-                                <a *ngFor="let item of tecnologiasItems()" href="{{item.linkWiki}}" target="_blank">
-                                    <button mat-stroked-button >
-                                        {{item.label}}
-                                    </button>
-                                </a>
-                                
-                            
+                            <a class="contenedor-sobremi__tecnologias-btns" mat-stroked-button *ngFor="let item of tecnologiasItems()" href="{{item.linkWiki}}"
+                                target="_blank">
+                                {{item.label}}
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- <section id="seccion-3" style="height: auto; z-index: 7;">
-                <div class="fondo-tecnologias">
-                    <h1>Tecnologías</h1>
-                </div>
-
-            </section> -->
-
             <section id="seccion-3" style="height: auto; z-index: 6;">
                 <div class="fondo-proyectos">
-                    <h1>Proyectos</h1>
+                    <h2>Proyectos</h2>
+                    <app-proyectos style="width: 100%;"></app-proyectos>
                 </div>
 
             </section>
 
-            <section id="seccion-4" style="z-index: 9;">
-                <h1>Seccion 5</h1>
+            <section id="seccion-4" style="height: auto; z-index: 9;">
+                <div class="fondo-contacto">
+                    <h2>Contacto</h2>
+                    <img class="img-correo" src="assets/img/correo.png">
+                    <ul class="contenedor-contacto">
+                        <li>
+                            <button matTooltip="Copiar dirección de correo" mat-raised-button matTooltipPosition="left"
+                                (click)="copiarCorreoAlPortapapeles()">
+                                Copiar
+                            </button>
+                        </li>
+                        <li>
+                            <a matTooltip="Abrir en tu app de correo" href="mailto:alanjafet.rl@gmail.com"
+                                matTooltipPosition="right" target="_blank">
+                                <button mat-raised-button>
+                                    Redirigir
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="logos-trabajo">
+                        <div matTooltip="Visita mi perfil de LinkedIn" matTooltipPosition="left">
+                            <a href="https://www.linkedin.com/in/alan-jafet-rojas-lopez/" target="_blank">
+                                <img src="assets/img/logos/linkedin.png" />
+                            </a>
+                        </div>
+
+                        <div>
+                            <a matTooltip="Visita mi perfil de GitHub" matTooltipPosition="right"
+                                href="https://github.com/AlanJafetRL" target="_blank">
+                                <img src="assets/img/logos/github.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </section>
         </mat-sidenav-content>
     </mat-sidenav-container>
 
 
 </div>
-<!-- 
-<mat-toolbar>
-    <button mat-icon-button (click)="collapsed.set(!collapsed())">
-        <mat-icon>menu</mat-icon>
-    </button>
-</mat-toolbar>
-
-<mat-sidenav-container>
-    <mat-sidenav  opened="true" mode="side" [style.width]="sidenavWidth()">
-        <app-custom-sidenav [collapsed]="collapsed()"/>
-    </mat-sidenav>
-
-    <mat-sidenav-content class="content" [style.margin-left]="sidenavWidth()">
-        <section id="seccion-1" style="height: 1500px; background: aqua;">
-            <h1>Seccion 1</h1>
-        </section>
-
-        <section id="seccion-2" style="height: 1500px; background: red;">
-            <h1>Seccion 2</h1>
-        </section>
-    </mat-sidenav-content>
-</mat-sidenav-container>
-
- -->

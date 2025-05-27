@@ -1,10 +1,12 @@
 @use '@angular/material' as mat;
 
-//-- Animaciones --//
-@keyframes show {
+//--- Animaciones ---//
+
+// Animación para menú en moviles //
+@keyframes mostrarMenu {
     from {
         opacity: 0;
-        scale: 10%;
+        scale: 90%;
     }
 
     to {
@@ -13,27 +15,42 @@
     }
 }
 
-@keyframes movimiento_scroll {
+@keyframes ocultarMenu {
     from {
-        transform: translateY(0px);
+        opacity: 1;
+        scale: 100%;
     }
 
     to {
-        transform: translateY(100px);
+        opacity: 0;
+        scale: 90%;
     }
 }
 
-/* section {
-    view-timeline-name: --reveal;
+.menu-anim-show {
+    animation: mostrarMenu 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-    animation-name: movimiento_scroll;
-    animation-fill-mode: both;
+.menu-anim-hide {
+    animation: ocultarMenu 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-    animation-timeline: --reveal;
-    animation-range: entry 25% cover 50%;
-} */
 
-//-- Globales --//
+// Animación para elementos en pantalla //
+@keyframes mostrarElementos {
+    from {
+        opacity: 50%;
+        scale: 80%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+
+//--- Globales ---//
 h1 {
     font: var(--mat-sys-display-large);
 }
@@ -42,8 +59,121 @@ h2 {
     font: var(--mat-sys-display-medium);
 }
 
-.texto-grande {
+.texto-grande,
+h3 {
     font: var(--mat-sys-title-large);
+}
+
+h1,
+h2,
+.texto-grande,
+button {
+    view-timeline-name: --reveal;
+
+    animation-name: mostrarElementos;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 10% cover 50%;
+}
+
+.fondo-contacto {
+
+    h2,
+    button {
+        animation-range: entry 0% cover 15%;
+    }
+}
+
+//--- Media queries ---//
+@media (width >=768px) {
+
+    .nav__target,
+    .nav__links {
+        z-index: -20;
+        display: none;
+    }
+}
+
+
+@media (width < 768px) {
+    h1 {
+        font: var(--mat-sys-display-medium);
+    }
+
+    h2 {
+        font: var(--mat-sys-display-small);
+    }
+
+    .texto-grande,
+    h3 {
+        font: var(--mat-sys-title-medium);
+    }
+
+    .contenedor-sobremi__tecnologias-btns {
+        font: var(--mat-sys-label-medium);
+    }
+
+
+
+    .cuadro-superior {
+        //background: orange;
+        justify-content: space-between;
+
+        mat-toolbar {
+            display: none;
+        }
+
+        .nav__target {
+            display: flex;
+            z-index: 10;
+
+            .btn-menu {
+                background: var(--mat-sys-primary);
+                color: var(--mat-sys-on-primary);
+                box-shadow: var(--mat-sys-level5);
+            }
+        }
+
+
+        .nav__links {
+            display: grid;
+            position: fixed;
+            top: 80px;
+            place-items: center;
+            z-index: 10;
+
+            background-color: var(--mat-sys-primary);
+            box-shadow: var(--mat-sys-level5);
+            border-radius: 15px;
+
+            .nav {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                width: auto;
+
+                .nav-items {
+                    //background: red;
+                    background: var(--mat-sys-primary);
+                    color: var(--mat-sys-on-primary);
+                    box-shadow: var(--mat-sys-level4);
+                    margin: 15px;
+                    width: auto;
+
+                    &_text {
+                        color: var(--mat-sys-on-primary);
+                    }
+                }
+
+                .activated {
+                    box-shadow: var(--mat-sys-level0);
+                }
+            }
+        }
+
+
+    }
 }
 
 //-- Estilos --//
@@ -53,6 +183,8 @@ h2 {
 }
 
 .cuadro-superior {
+    z-index: 10;
+    //background: orange;
     height: 70px;
     width: 100%;
     position: absolute;
@@ -62,14 +194,15 @@ h2 {
     align-items: center;
 
     mat-toolbar {
-        display: flex;
-        justify-content: center;
+        //background: red;
         position: absolute;
+        width: auto;
+        justify-content: center;
+
         background: var(--mat-sys-primary);
         color: var(--mat-sys-on-primary);
         box-shadow: var(--mat-sys-level5);
         border-radius: 20px;
-        width: auto;
 
         .nav {
             //background: green;
@@ -148,7 +281,9 @@ mat-sidenav-container {
             background: var(--mat-sys-surface);
 
             .fondo-sobremi {
-                height: 800px;
+                height: auto;
+                padding-top: 160px;
+                padding-bottom: 160px;
                 box-shadow: var(--mat-sys-level5);
                 background: var(--mat-sys-primary-container);
                 color: var(--mat-sys-on-primary-container);
@@ -178,7 +313,7 @@ mat-sidenav-container {
                         flex-grow: 1;
                         flex-basis: 200;
 
-                        button {
+                        &-btns {
                             margin: 3px;
                         }
                     }
@@ -186,30 +321,98 @@ mat-sidenav-container {
             }
         }
 
-        /*  #seccion-3 {
-            background: var(--mat-sys-surface);
-
-            .fondo-tecnologias {
-                height: 500px;
-            }
-
-        } */
-
         #seccion-3 {
             background: var(--mat-sys-surface);
 
             .fondo-proyectos {
-                height: 800px;
-                //background: var(--mat-sys-surface-dim);
+                //background: red;
+                height: auto;
+                padding-top: 160px;
+                padding-bottom: 160px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
             }
         }
 
         #seccion-4 {
-            background: var(--mat-sys-inverse-surface);
-            color: var(--mat-sys-inverse-on-surface);
-            height: 800px;
-            border-radius: 25px 25px 0 0;
-            box-shadow: var(--mat-sys-level5);
+            background: var(--mat-sys-surface);
+
+            .fondo-contacto {
+                height: auto;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                box-shadow: var(--mat-sys-level5);
+                background: var(--mat-sys-inverse-surface);
+                color: var(--mat-sys-inverse-on-surface);
+
+                border-radius: 25px 25px 0 0;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                .img-correo {
+                    border-radius: 60px;
+                    height: 60px;
+                    //background: var(--mat-sys-primary);
+                    color: var(--mat-sys-on-primary);
+                }
+
+                .contenedor-contacto {
+                    //background: green;
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    justify-content: center;
+                    justify-items: center;
+                    flex-wrap: wrap;
+                    gap: 15px;
+
+                    li {
+                        //background: red;
+                        display: flex;
+                        flex-direction: row;
+                        justify-items: center;
+                        justify-content: center;
+
+                        padding: 10px 10px;
+                        flex-grow: 1;
+
+                        button {
+                            margin: 3px;
+                        }
+                    }
+
+
+                    &__btn {
+                        padding: 10px 10px;
+                    }
+                }
+
+                .logos-trabajo {
+                    //background: red;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    padding-top: 25px;
+
+                    div {
+                        padding: 10px 10px 0 10px;
+
+                        img {
+                            width: 25px;
+                        }
+                    }
+                }
+            }
         }
 
     }
