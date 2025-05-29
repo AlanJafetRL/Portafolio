@@ -9,6 +9,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { DetallesAppUsersComponent } from '../detalles/detalles-app-users/detalles-app-users.component';
 import { DetallesAppSistemaVentaComponent } from '../detalles/detalles-app-sistema-venta/detalles-app-sistema-venta.component';
 import { DetallesApiSistemaVentaComponent } from '../detalles/detalles-api-sistema-venta/detalles-api-sistema-venta.component';
+import { DetallesPortafolioComponent } from '../detalles/detalles-portafolio/detalles-portafolio.component';
+import { DetallesAppEcommerceComponent } from '../detalles/detalles-app-ecommerce/detalles-app-ecommerce.component';
+import { DetallesApiEcommerceComponent } from '../detalles/detalles-api-ecommerce/detalles-api-ecommerce.component';
 
 @Component({
   selector: 'app-proyectos',
@@ -27,7 +30,10 @@ export class ProyectosComponent {
   arregloDetalles: Type<any>[] = [
     DetallesAppUsersComponent,
     DetallesAppSistemaVentaComponent,
-    DetallesApiSistemaVentaComponent
+    DetallesApiSistemaVentaComponent,
+    DetallesPortafolioComponent,
+    DetallesAppEcommerceComponent,
+    DetallesApiEcommerceComponent
   ]
 
   /**
@@ -43,6 +49,11 @@ export class ProyectosComponent {
    * @param proyecto Índice del proyecto en el arreglo de detalles
    */
   abrirDialogoDetalles(proyecto: number) {
-    this.dialog.open(this.arregloDetalles[proyecto]); // Abre el diálogo con el componente correspondiente
+    this.dialog.open(
+      this.arregloDetalles[proyecto],
+      {
+        height: '80vh', maxHeight: '100vh', // Altura del diálogo, 80% de la altura de la ventana
+        width: '80vw', maxWidth: '100vw'  // Ancho del diálogo, 80% del ancho de la ventana
+      });
   }
 }

@@ -1,1 +1,43 @@
-<p>detalles-app-sistema-venta works!</p>
+<h2 mat-dialog-title>Frontend – Aplicación Web para Sistema de Ventas</h2>
+
+<mat-dialog-content>
+    <div class="contenedor-carousel">
+        <app-carousel [items]="carouselData"></app-carousel>
+    </div>
+
+    <div class="contenedor-descripcion">
+        <p>
+            <br>
+            Desarrollé el frontend de una aplicación web para la gestión de ventas, con enfoque en experiencia de
+            usuario, diseño responsive y arquitectura modular basada en NgModules.
+            <br>
+            La interfaz se adapta dinámicamente al rol del usuario (Administrador, Empleado, Supervisor), ofreciendo
+            funcionalidades personalizadas.
+            <br><br>
+            <strong> Principales funcionalidades: </strong>
+
+            <li>Dashboard: Resumen de ventas semanales (ingresos, ventas, productos vendidos).</li>
+            <li>Gestión de usuarios y productos: CRUD completo con tablas interactivas.</li>
+            <li>Registro de ventas: Búsqueda rápida de productos, selección de cantidad, tipo de pago, y resumen final.
+            </li>
+            <li>Historial de ventas: Filtros por fecha o ID.</li>
+            <li>Reportes: Generación y exportación de reportes en Excel.</li>
+            <br>
+            Este proyecto marcó mi primer acercamiento profundo a Angular y Angular Material. Aprendí sobre diseño de
+            componentes, consumo de API RESTful, personalización de interfaces y buenas prácticas en desarrollo
+            frontend.
+        </p>
+        <mat-divider style="margin: 0 30% 0 30%;"></mat-divider>
+        <p style="text-align: center; font-style: italic;">
+            <br>
+            Tecnologías: JavaScript, TypeScript, HTML/CSS, Angular, Material UI
+        </p>
+    </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <a mat-button href="https://github.com/AlanJafetRL/AppSistemaVenta" target="_blank">Repositorio</a>
+    <a mat-button href="https://sistemaventaweb-hjd5f7dwgah9crfy.centralus-01.azurewebsites.net/" target="_blank">Página en línea</a>
+    <button mat-button mat-dialog-close>Volver</button>
+</mat-dialog-actions>

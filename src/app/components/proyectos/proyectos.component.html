@@ -1,16 +1,22 @@
 <div class="proyectos">
     <ul class="proyectos__contenedor">
+
+        <!-- Card Semana Mecatronica -->
         <li>
             <mat-card>
-                <img mat-card-image loading="lazy" src="assets/img/capturas/semana-mecatronica/AppUsers-01.jpeg" />
+                <img mat-card-image loading="lazy" src="assets/img/proyectos/app-users/01.jpeg" />
                 <mat-card-header>
-                    <mat-card-title>Plantilla para la Semana de la Mecatronica</mat-card-title>
-                    <mat-card-subtitle>Aplicacion web</mat-card-subtitle>
+                    <mat-card-title>Página web tipo plantilla para evento académico</mat-card-title>
+                    <mat-card-subtitle>- Frontend -</mat-card-subtitle>
                 </mat-card-header>
                 <mat-card-content>
                     <p class="texto-descripcion">
-                        Pagina para fablisurcfhnalsdfhnalsmkd awohfinasdlkfn alsdnuf alksdnhf asdf mhsfd alks mdhflaknse
-                        fmlakshdflniawefn lksdjhnf lakjshdf lanksdmf
+                        Plantilla web desarrollada para la 7ma Semana de Mecatrónica y 1ra Semana de Ingeniería de la
+                        UPIIZ – IPN.
+                        <br>
+                        Construida con Angular y Angular Material, presenta un diseño responsivo, moderno y adaptable.
+                        Sirvió como prototipo para definir la estructura visual del sitio final y motivó el desarrollo
+                        de futuras aplicaciones relacionadas con el evento.
                     </p>
                     <mat-divider></mat-divider>
                     <p class="texto-tecnologias">
@@ -21,22 +27,87 @@
                 <mat-card-actions>
                     <a mat-button (click)="abrirDialogoDetalles(0)">Detalles</a>
                     <a mat-button href="https://github.com/AlanJafetRL/AppUsers" target="_blank">Repositorio</a>
-                    <a mat-button href="https://alanjafetrl.github.io/AppUsers/pages/inicio"
-                        target="_blank">Página en línea</a>
+                    <a mat-button href="https://appsemanamecatronica-erfdhtf5g3g6a6fb.centralus-01.azurewebsites.net/pages/inicio"
+                        target="_blank">Página en
+                        línea</a>
                 </mat-card-actions>
             </mat-card>
         </li>
 
+        <!-- Card App Sistema de Ventas -->
         <li>
             <mat-card>
-                <img mat-card-image loading="lazy" src="assets/img/capturas/semana-mecatronica/AppUsers-02.jpeg" />
+                <img mat-card-image loading="lazy" src="assets/img/proyectos/app-sistema/02.jpeg" />
                 <mat-card-header>
-                    <mat-card-title>Plantilla para la Semana de la Mecatronica</mat-card-title>
+                    <mat-card-title>Aplicación Web para Sistema de Ventas</mat-card-title>
+                    <mat-card-subtitle>- Frontend -</mat-card-subtitle>
                 </mat-card-header>
                 <mat-card-content>
                     <p class="texto-descripcion">
-                        Pagina para fablisurcfhnalsdfhnalsmkd awohfinasdlkfn alsdnuf alksdnhf asdf mhsfd alks mdhflaknse
-                        fmlakshdflniawefn lksdjhnf lakjshdf lanksdmf
+                        Frontend desarrollado en Angular y Angular Material para un sistema de ventas con roles de
+                        usuario, dashboard, gestión de productos/usuarios, historial de ventas y generación de reportes.
+                        <br>
+                        Enfocado en arquitectura modular, diseño responsivo y consumo eficiente de API RESTful.
+                    </p>
+                    <mat-divider></mat-divider>
+                    <p class="texto-tecnologias">
+                        <br>
+                        JavaScript, TypeScript, HTML/CSS, Angular, Material UI
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <a mat-button (click)="abrirDialogoDetalles(1)">Detalles</a>
+                    <a mat-button href="https://github.com/AlanJafetRL/AppSistemaVenta" target="_blank">Repositorio</a>
+                    <a mat-button href="https://sistemaventaweb-hjd5f7dwgah9crfy.centralus-01.azurewebsites.net/"
+                        target="_blank">
+                        Página en línea
+                    </a>
+                </mat-card-actions>
+            </mat-card>
+        </li>
+
+        <!-- Card API Sistema de Ventas -->
+        <li>
+            <mat-card>
+                <img mat-card-image loading="lazy" src="assets/img/proyectos/api-sistema/01.png" />
+                <mat-card-header>
+                    <mat-card-title>API RESTful para Sistema de Ventas</mat-card-title>
+                    <mat-card-subtitle>- Backend -</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <p class="texto-descripcion">
+                        Backend desarrollado en .NET con arquitectura por capas. API RESTful documentada con Swagger,
+                        incluye autenticación por roles, gestión de usuarios/productos, dashboard y reportes.
+                        <br>
+                        Uso avanzado de LINQ, IoC y programación orientada a objetos.
+                    </p>
+                    <mat-divider></mat-divider>
+                    <p class="texto-tecnologias">
+                        <br>
+                        C#, .NET, ASP.NET Core, Entity Framework, SQL Server
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <a mat-button (click)="abrirDialogoDetalles(2)">Detalles</a>
+                    <a mat-button href="https://github.com/AlanJafetRL/APISistemaVenta" target="_blank">Repositorio</a>
+                </mat-card-actions>
+            </mat-card>
+        </li>
+
+        <!-- Card Portafolio -->
+        <li>
+            <mat-card>
+                <img mat-card-image loading="lazy" src="assets/img/proyectos/app-portafolio/01.jpeg" />
+                <mat-card-header>
+                    <mat-card-title class="titulos">Portafolio</mat-card-title>
+                    <mat-card-subtitle>- Frontend -</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <p class="texto-descripcion">
+                        Backend desarrollado en .NET con arquitectura por capas. API RESTful documentada con Swagger,
+                        incluye autenticación por roles, gestión de usuarios/productos, dashboard y reportes.
+                        <br>
+                        Uso avanzado de LINQ, IoC y programación orientada a objetos.
                     </p>
                     <mat-divider></mat-divider>
                     <p class="texto-tecnologias">
@@ -45,24 +116,26 @@
                     </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <a mat-button (click)="abrirDialogoDetalles(1)">Detalles</a>
-                    <a mat-button href="https://github.com/AlanJafetRL/AppUsers" target="_blank">Repositorio</a>
-                    <a mat-button href="https://alanjafetrl.github.io/AppUsers/pages/inicio"
-                        target="_blank">Página en línea</a>
+                    <a mat-button (click)="abrirDialogoDetalles(3)">Detalles</a>
+                    <a mat-button href="https://github.com/AlanJafetRL/APISistemaVenta" target="_blank">Repositorio</a>
                 </mat-card-actions>
             </mat-card>
         </li>
 
+        <!-- Card App E-Commerce -->
         <li>
             <mat-card>
-                <img mat-card-image loading="lazy" src="assets/img/capturas/semana-mecatronica/AppUsers-02.jpeg" />
+                <img mat-card-image loading="lazy" src="assets/img/proyectos/app-portafolio/01.jpeg" />
                 <mat-card-header>
-                    <mat-card-title>Plantilla para la Semana de la Mecatronica</mat-card-title>
+                    <mat-card-title class="titulos">E-Commerce</mat-card-title>
+                    <mat-card-subtitle>- Frontend -</mat-card-subtitle>
                 </mat-card-header>
                 <mat-card-content>
                     <p class="texto-descripcion">
-                        Pagina para fablisurcfhnalsdfhnalsmkd awohfinasdlkfn alsdnuf alksdnhf asdf mhsfd alks mdhflaknse
-                        fmlakshdflniawefn lksdjhnf lakjshdf lanksdmf
+                        Backend desarrollado en .NET con arquitectura por capas. API RESTful documentada con Swagger,
+                        incluye autenticación por roles, gestión de usuarios/productos, dashboard y reportes.
+                        <br>
+                        Uso avanzado de LINQ, IoC y programación orientada a objetos.
                     </p>
                     <mat-divider></mat-divider>
                     <p class="texto-tecnologias">
@@ -70,6 +143,42 @@
                         JavaScript, HTML/CSS, Angular, Material UI
                     </p>
                 </mat-card-content>
+                <mat-card-actions>
+                    <a mat-button (click)="abrirDialogoDetalles(4)">Detalles</a>
+                    <a mat-button href="https://github.com/AlanJafetRL/APISistemaVenta" target="_blank">Repositorio</a>
+                    <a mat-button
+                        target="_blank">
+                        Página en línea
+                    </a>
+                </mat-card-actions>
+            </mat-card>
+        </li>
+
+        <!-- Card API E-Commerce -->
+        <li>
+            <mat-card>
+                <img mat-card-image loading="lazy" src="assets/img/proyectos/app-portafolio/01.jpeg" />
+                <mat-card-header>
+                    <mat-card-title class="titulos">E-Commerce</mat-card-title>
+                    <mat-card-subtitle>- Backend -</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <p class="texto-descripcion">
+                        Backend desarrollado en .NET con arquitectura por capas. API RESTful documentada con Swagger,
+                        incluye autenticación por roles, gestión de usuarios/productos, dashboard y reportes.
+                        <br>
+                        Uso avanzado de LINQ, IoC y programación orientada a objetos.
+                    </p>
+                    <mat-divider></mat-divider>
+                    <p class="texto-tecnologias">
+                        <br>
+                        JavaScript, HTML/CSS, Angular, Material UI
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <a mat-button (click)="abrirDialogoDetalles(5)">Detalles</a>
+                    <a mat-button href="https://github.com/AlanJafetRL/APISistemaVenta" target="_blank">Repositorio</a>
+                </mat-card-actions>
             </mat-card>
         </li>
     </ul>

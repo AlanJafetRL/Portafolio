@@ -18,7 +18,7 @@
             [class.menu-anim-hide]="!menuAbierto">
             <mat-nav-list class="nav">
                 <a mat-list-item class="nav-items" *ngFor="let item of menuItems()" href="#{{item.section}}"
-                    [class.activated]="seccionActiva == item.section" (click)="toggleMenu()">
+                    (click)="toggleMenu()">
                     <span matListItemTitle class="nav-items_text">{{item.label}}</span>
                 </a>
             </mat-nav-list>
@@ -78,15 +78,15 @@
                 </div>
             </section>
 
-            <section id="seccion-3" style="height: auto; z-index: 6;">
+            <section id="seccion-3" style="height: auto; z-index: 7;">
                 <div class="fondo-proyectos">
                     <h2>Proyectos</h2>
-                    <app-proyectos style="width: 100%;"></app-proyectos>
+                    <app-proyectos id="seccion-3" style="width: 100%;"></app-proyectos>
                 </div>
 
             </section>
 
-            <section id="seccion-4" style="height: auto; z-index: 9;">
+            <section id="seccion-4" style="height: auto; z-index: 6;">
                 <div class="fondo-contacto">
                     <h2>Contacto</h2>
                     <img class="img-correo" src="assets/img/correo.png">
@@ -100,7 +100,7 @@
                         <li>
                             <a matTooltip="Abrir en tu app de correo" href="mailto:alanjafet.rl@gmail.com"
                                 matTooltipPosition="right" target="_blank">
-                                <button mat-raised-button>
+                                <button mat-raised-button (click)="redirigirAppDeCorreo()">
                                     Redirigir
                                 </button>
                             </a>

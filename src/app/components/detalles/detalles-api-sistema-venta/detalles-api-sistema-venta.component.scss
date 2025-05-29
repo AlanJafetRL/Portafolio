@@ -1,0 +1,47 @@
+@use '@angular/material' as mat;
+
+//--- Media Queries ---//
+@media (width > 1168px) {
+    .contenedor-carousel {
+        width: 900px;
+        height: 450px;
+    }
+}
+
+@media (width > 968px) and (width <= 1168px) {
+    .contenedor-carousel {
+        width: 700px;
+        height: 350px;
+    }
+}
+
+@media (width <= 968px) {
+    .contenedor-carousel {
+        width: 400px;
+        height: 200px;
+    }
+    
+}
+
+@media (width < 500px) {
+    .contenedor-carousel {
+        width: 325px;
+        height: 170px;
+    }
+    
+}
+
+mat-dialog-content {
+    overflow-y: auto;
+    width: 100%;
+    display: block;
+    justify-items: center;
+
+    .contenedor-descripcion {
+        //background: red;
+        width: 80%;
+        height: auto;
+        text-align: left;
+    }
+}
+

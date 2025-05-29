@@ -126,6 +126,10 @@ export class AppComponent implements AfterViewInit {
       label: 'GIT',
       linkWiki: 'https://es.wikipedia.org/wiki/Git'
     },
+    {
+      label: 'Azure',
+      linkWiki: 'https://es.wikipedia.org/wiki/Microsoft_Azure'
+    }
   ]);
 
   private _snackBar = inject(MatSnackBar); // Servicio para mostrar mensajes emergentes
@@ -141,7 +145,7 @@ export class AppComponent implements AfterViewInit {
               //console.log('Seccion: ', this.seccionActiva);
             }
           });
-        }, { threshold: 0.3 }); // Configuración del umbral de visibilidad
+        }, { threshold: 0.5 }); // Configuración del umbral de visibilidad
 
         secciones.forEach(seccion => observer.observe(seccion));  // Observa cada sección para detectar cambios en su visibilidad
       });
@@ -160,6 +164,13 @@ export class AppComponent implements AfterViewInit {
         //console.error('Error al copiar');
         this.abrirSnackBar("¡Error al copiar correo al portapapeles! Intente de nuevo", '❌');  // Mostrar mensaje emergente de error
       });
+  }
+
+  /**
+   * Función para redirigir a la aplicación de correo
+   */ 
+  redirigirAppDeCorreo() {
+    this.abrirSnackBar("Redirigiendo a la aplicación de correo...", '✅'); // Mostrar mensaje emergente de redirección
   }
 
   /**

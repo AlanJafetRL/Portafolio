@@ -75,6 +75,10 @@ li {
                 box-shadow: var(--mat-sys-level3);
                 height: auto;
 
+                mat-card-header {
+                    justify-content: center;
+                }
+
                 mat-card-subtitle {
                     font-style: italic;
                 }

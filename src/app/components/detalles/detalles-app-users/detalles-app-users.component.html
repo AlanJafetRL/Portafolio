@@ -1,15 +1,55 @@
-<h2 mat-dialog-title>Plantilla para la 7ma Semana de la Mecatronica</h2>
+<h2 mat-dialog-title>Página web tipo plantilla para evento académico</h2>
 
 <mat-dialog-content>
-    <p>Algo de texto y carrusel de imagenes por aqui</p>
+    <div class="contenedor-carousel">
+        <app-carousel [items]="carouselData"></app-carousel>
+    </div>
 
-
-    <p>Algo de texto y carrusel de imagenes por aqui</p>
+    <div class="contenedor-descripcion">
+        <p style="text-align: center; font-style: italic;">
+            <br>
+            Proyecto realizado como prototipo para la 
+            &#34;7ma Semana de Mecatrónica y 1ra Semana de la Ingeniería&#34;
+             de la UPIIZ –
+            IPN (Unidad Profesional Interdisciplinaria de Ingeniería Campus Zacatecas - Instituto Politécnico Nacional).
+            <br>
+            <br>
+            <mat-divider style="margin: 0 5% 0 5%;"></mat-divider>
+        </p>
+        <p>
+            El objetivo fue presentar al cliente una versión preliminar de lo que podría ser el sitio oficial del
+            evento, permitiéndole visualizar la estructura general y el diseño.
+            <br>
+            La aplicación fue desarrollada con Angular como SPA (Single Page Application), incorporando Angular Material
+            para lograr una interfaz limpia, moderna y responsiva, manteniendo una estética coherente con la identidad
+            visual de ediciones anteriores del evento.
+            <br>
+            El contenido visual y textual fue planteado como referencia, sirviendo como guía para el contenido final.
+            Esta plantilla ayudó al cliente a tomar la decisión de avanzar hacia un sistema más robusto, incluyendo:
+            <br>
+            <li>
+                Un portal para preregistro de asistentes y registro a actividades académicas, deportivas y recreativas.
+            </li>
+            <li>
+                Una futura aplicación complementaria para el equipo organizador, enfocada en el manejo de registros,
+                asistencias, altas y bajas.
+            </li>
+            <br>
+            Durante el desarrollo, adquirí experiencia en la construcción de interfaces responsivas con Angular y
+            Material UI, en la personalización de paletas de colores, animaciones, y en la disposición eficiente de
+            elementos para mejorar la experiencia del usuario.
+        </p>
+        <mat-divider style="margin: 0 30% 0 30%;"></mat-divider>
+        <p style="text-align: center; font-style: italic;">
+            <br>
+            Tecnologías: JavaScript, HTML/CSS, Angular, Material UI
+        </p>
+    </div>
 
 </mat-dialog-content>
 
 <mat-dialog-actions>
     <a mat-button href="https://github.com/AlanJafetRL/AppUsers" target="_blank">Repositorio</a>
-    <a mat-button href="https://alanjafetrl.github.io/AppUsers/pages/inicio" target="_blank">Página en línea</a>
+    <a mat-button href="https://appsemanamecatronica-erfdhtf5g3g6a6fb.centralus-01.azurewebsites.net/pages/inicio" target="_blank">Página en línea</a>
     <button mat-button mat-dialog-close>Volver</button>
 </mat-dialog-actions>
