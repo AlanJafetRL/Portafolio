@@ -1,0 +1,16 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="250" height="250">
+	<title>Proyecto nuevo</title>
+	<defs>
+		<filter x="-50%" y="-50%" width="200%" height="200%" id="f1" ><feDropShadow dx="-6.123233995736766e-16" dy="10" stdDeviation="15.833333333333334" flood-color="#000000" flood-opacity=".5"/></filter>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.s0 { filter: url(#f1);fill: #005cbb } 
+		.t1 { font-size: 150px;fill: #ffffff;font-weight: 700;font-family: "Roboto-Bold", "Roboto" } 
+	</style>
+	<path id="Capa 3" fill-rule="evenodd" class="s0" d="m44 45h161c12.7 0 23 10.3 23 23v111c0 12.7-10.3 23-23 23h-161c-12.7 0-23-10.3-23-23v-111c0-12.7 10.3-23 23-23z"/>
+	<text id="AJ" style="transform: matrix(1,0,0,1,129.308,177)" >
+		<tspan x="-92.4" y="0" class="t1">A</tspan><tspan  y="0" class="t1">J
+</tspan>
+	</text>
+</svg>
