@@ -48,7 +48,7 @@ export type TecnologiasItem = {
 })
 
 export class AppComponent implements AfterViewInit {
-  title = 'Portafolio';
+  title = 'Alan Jafet - Dev';
 
   seccionActiva = ''; // Sección activa del menú
   menuAbierto = false;  // Estado del menú (abierto/cerrado)
@@ -127,7 +127,7 @@ export class AppComponent implements AfterViewInit {
       linkWiki: 'https://es.wikipedia.org/wiki/Git'
     },
     {
-      label: 'Azure',
+      label: 'Microsoft Azure',
       linkWiki: 'https://es.wikipedia.org/wiki/Microsoft_Azure'
     }
   ]);

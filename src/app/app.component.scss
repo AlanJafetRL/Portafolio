@@ -274,6 +274,12 @@ mat-sidenav-container {
                         }
                     }
                 }
+
+                .btn-cv {
+                    margin: 15px;
+                    padding: 15px;
+                    box-shadow: var(--mat-sys-level2);
+                }
             }
         }
 

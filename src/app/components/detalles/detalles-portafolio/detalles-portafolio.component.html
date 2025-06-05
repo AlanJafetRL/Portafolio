@@ -1,1 +1,36 @@
-<p>detalles-portafolio works!</p>
+<h2 mat-dialog-title>Frontend – Portafolio Profesional Web</h2>
+
+<mat-dialog-content>
+    <div class="contenedor-carousel">
+        <app-carousel [items]="carouselData"></app-carousel>
+    </div>
+
+    <div class="contenedor-descripcion">
+        <p>
+            <br>
+            Sitio web personal desarrollado con Angular y Material UI, enfocado en presentar mis habilidades,
+            experiencia y proyectos de forma clara, visualmente limpia y fácil de navegar.
+            <br><br>
+            Se implementaron componentes reutilizables, efectos de desplazamiento suaves y diseño responsivo 
+            mediante <i>media queries</i> para mejorar la experiencia del usuario en distintos dispositivos.
+            <br>
+            Durante su desarrollo, busqué una solución para desplegar mis proyectos, lo que me llevó a explorar y
+            utilizar Microsoft Azure. Gracias a esto, aprendí a gestionar el despliegue de aplicaciones completas
+            (frontend, backend y bases de datos) desde una misma plataforma.
+            <br><br>
+            Esta experiencia me permitió afinar mis conocimientos sobre diseño de interfaces, estructura visual y la
+            importancia de una presentación profesional y minimalista.
+        </p>
+        <mat-divider style="margin: 0 30% 0 30%;"></mat-divider>
+        <p style="text-align: center; font-style: italic;">
+            <br>
+            Tecnologías: JavaScript, HTML/CSS, Angular, Material UI
+        </p>
+    </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <a mat-button href="https://github.com/AlanJafetRL/Portafolio" target="_blank">Repositorio</a>
+    <button mat-button mat-dialog-close>Volver</button>
+</mat-dialog-actions>

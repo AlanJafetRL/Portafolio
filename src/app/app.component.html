@@ -35,8 +35,9 @@
                     <h2>Desarrollador FullStack</h2>
                     <mat-progress-bar mode="buffer" style="width: 30%;"></mat-progress-bar>
                     <div class="logos-trabajo">
-                        <div matTooltip="Visita mi perfil de LinkedIn">
-                            <a href="https://www.linkedin.com/in/alan-jafet-rojas-lopez/" target="_blank">
+                        <div>
+                            <a matTooltip="Visita mi perfil de LinkedIn"
+                                href="https://www.linkedin.com/in/alan-jafet-rojas-lopez/" target="_blank">
                                 <img src="assets/img/logos/linkedin.png" />
                             </a>
                         </div>
@@ -47,6 +48,12 @@
                                 <img src="assets/img/logos/github.png" />
                             </a>
                         </div>
+                    </div>
+
+                    <div>
+                        <a  href="assets/docs/CV-AlanRojas-DevFullStack.pdf" target="_blank">
+                            <button mat-flat-button class="btn-cv" matTooltip="Descarga mi CV">Descargar CV</button>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -69,8 +76,8 @@
                             equipos y proyectos en los que participo.
                         </p>
                         <div class="contenedor-sobremi__tecnologias">
-                            <a class="contenedor-sobremi__tecnologias-btns" mat-stroked-button *ngFor="let item of tecnologiasItems()" href="{{item.linkWiki}}"
-                                target="_blank">
+                            <a class="contenedor-sobremi__tecnologias-btns" mat-stroked-button
+                                *ngFor="let item of tecnologiasItems()" href="{{item.linkWiki}}" target="_blank">
                                 {{item.label}}
                             </a>
                         </div>
@@ -107,8 +114,9 @@
                         </li>
                     </ul>
                     <div class="logos-trabajo">
-                        <div matTooltip="Visita mi perfil de LinkedIn" matTooltipPosition="left">
-                            <a href="https://www.linkedin.com/in/alan-jafet-rojas-lopez/" target="_blank">
+                        <div>
+                            <a matTooltip="Visita mi perfil de LinkedIn" matTooltipPosition="left"
+                                href="https://www.linkedin.com/in/alan-jafet-rojas-lopez/" target="_blank">
                                 <img src="assets/img/logos/linkedin.png" />
                             </a>
                         </div>
