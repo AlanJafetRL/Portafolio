@@ -10,6 +10,7 @@ import { DetallesAppUsersComponent } from '../detalles/detalles-app-users/detall
 import { DetallesAppSistemaVentaComponent } from '../detalles/detalles-app-sistema-venta/detalles-app-sistema-venta.component';
 import { DetallesApiSistemaVentaComponent } from '../detalles/detalles-api-sistema-venta/detalles-api-sistema-venta.component';
 import { DetallesPortafolioComponent } from '../detalles/detalles-portafolio/detalles-portafolio.component';
+import { DetallesAppSemanaComponent } from '../detalles/detalles-app-semana/detalles-app-semana.component';
 
 @Component({
   selector: 'app-proyectos',
@@ -26,6 +27,7 @@ export class ProyectosComponent {
   // Arreglo de componentes para los detalles de cada proyecto
   // Se utiliza Type<any>[] para permitir cualquier tipo de componente
   arregloDetalles: Type<any>[] = [
+    DetallesAppSemanaComponent,
     DetallesAppUsersComponent,
     DetallesAppSistemaVentaComponent,
     DetallesApiSistemaVentaComponent,

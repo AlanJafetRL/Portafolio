@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>Fullstack - Aplicación web con sistema de registro e información para evento académico</h2>
+
+<mat-dialog-content>
+    <div class="contenedor-carousel">
+        <app-carousel [items]="carouselData"></app-carousel>
+    </div>
+
+    <div class="contenedor-descripcion">
+        <p style="text-align: center; font-style: italic;">
+            <br>
+            Actualmente el proyecto continúa en evolución, con nuevas funcionalidades en desarrollo como control de
+            asistencia, edición de registros y panel para organizadores.
+            <br>
+            <br>
+            <mat-divider style="margin: 0 5% 0 5%;"></mat-divider>
+        </p>
+        <p>
+
+            Aplicación web desarrollada con Angular y .NET para la gestión y divulgación de un evento universitario.
+            <br>
+            Permite a los participantes registrarse en concursos y consultar información clave del evento (fechas,
+            categorías, lugar, etc.) desde una plataforma responsiva y accesible.
+            <br>
+            El backend implementa una API RESTful conectada a base de datos, mientras que el frontend ofrece formularios
+            validados, diseño visual limpio y estructura adaptable.
+            <br>
+            El sistema fue desplegado en Azure como versión funcional para presentación al cliente.
+            <br>
+            <br>
+            Este proyecto me permitió afianzar mis conocimientos en comunicación entre frontend y backend, validación de
+            formularios, despliegue en la nube y diseño de soluciones orientadas al usuario final.
+        </p>
+        <mat-divider style="margin: 0 30% 0 30%;"></mat-divider>
+        <p style="text-align: center; font-style: italic;">
+            <br>
+            Tecnologías: JavaScript, HTML/CSS, Angular, Material UI, C#, .NET, ASP.NET Core, Entity Framework, SQL
+            Server, Microsoft Azure
+        </p>
+    </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <a mat-button href="https://semanasieteapp.azurewebsites.net/pages/inicio" target="_blank">Página en línea</a>
+    <button mat-button mat-dialog-close>Volver</button>
+</mat-dialog-actions>

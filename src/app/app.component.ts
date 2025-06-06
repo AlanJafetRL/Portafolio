@@ -78,13 +78,42 @@ export class AppComponent implements AfterViewInit {
   // Lista de tecnologías
   // Utilizando signal para reactividad
   tecnologiasItems = signal<TecnologiasItem[]>([
+    
     {
-      label: 'JavaScript',
-      linkWiki: 'https://es.wikipedia.org/wiki/JavaScript'
+      label: 'Angular',
+      linkWiki: 'https://es.wikipedia.org/wiki/Angular_(framework)'
     },
     {
       label: 'TypeScript',
       linkWiki: 'https://es.wikipedia.org/wiki/TypeScript'
+    },    
+    {
+      label: '.NET',
+      linkWiki: 'https://es.wikipedia.org/wiki/.NET_Core'
+    },
+    {
+      label: 'ASP.NET',
+      linkWiki: 'https://es.wikipedia.org/wiki/ASP.NET_Core'
+    },
+    {
+      label: 'C#',
+      linkWiki: 'https://es.wikipedia.org/wiki/C_Sharp'
+    },
+    {
+      label: 'SQL',
+      linkWiki: 'https://es.wikipedia.org/wiki/SQL'
+    },
+    {
+      label: 'GIT',
+      linkWiki: 'https://es.wikipedia.org/wiki/Git'
+    },
+    {
+      label: 'Microsoft Azure',
+      linkWiki: 'https://es.wikipedia.org/wiki/Microsoft_Azure'
+    },
+    {
+      label: 'JavaScript',
+      linkWiki: 'https://es.wikipedia.org/wiki/JavaScript'
     },
     {
       label: 'HTML',
@@ -95,41 +124,13 @@ export class AppComponent implements AfterViewInit {
       linkWiki: 'https://es.wikipedia.org/wiki/CSS'
     },
     {
-      label: 'Angular',
-      linkWiki: 'https://es.wikipedia.org/wiki/Angular_(framework)'
-    },
-    {
       label: 'Java',
       linkWiki: 'https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)'
-    },
-    {
-      label: 'C#',
-      linkWiki: 'https://es.wikipedia.org/wiki/C_Sharp'
-    },
-    {
-      label: '.NET',
-      linkWiki: 'https://es.wikipedia.org/wiki/.NET_Core'
-    },
-    {
-      label: 'ASP.NET',
-      linkWiki: 'https://es.wikipedia.org/wiki/ASP.NET_Core'
-    },
-    {
-      label: 'SQL',
-      linkWiki: 'https://es.wikipedia.org/wiki/SQL'
     },
     {
       label: 'NoSQL',
       linkWiki: 'https://es.wikipedia.org/wiki/NoSQL'
     },
-    {
-      label: 'GIT',
-      linkWiki: 'https://es.wikipedia.org/wiki/Git'
-    },
-    {
-      label: 'Microsoft Azure',
-      linkWiki: 'https://es.wikipedia.org/wiki/Microsoft_Azure'
-    }
   ]);
 
   private _snackBar = inject(MatSnackBar); // Servicio para mostrar mensajes emergentes

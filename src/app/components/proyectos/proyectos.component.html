@@ -1,6 +1,36 @@
 <div class="proyectos">
     <ul class="proyectos__contenedor">
 
+        <li>
+            <mat-card>
+                <img mat-card-image loading="lazy" src="assets/img/proyectos/app-semana7/01.jpeg" />
+                <mat-card-header>
+                    <mat-card-title>Sistema de registro e información para evento académico</mat-card-title>
+                    <mat-card-subtitle>- Fullstack -</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <p class="texto-descripcion">
+                        Aplicación web con frontend en Angular y backend en .NET para registrar a los participantes
+                        y divulgar información relevante del evento académico de
+                        la 7ma Semana de Mecatrónica y 1ra Semana de Ingeniería de la UPIIZ – IPN.
+                        <br>
+                        Proyecto desplegado en Azure y en desarrollo activo.
+                    </p>
+                    <mat-divider></mat-divider>
+                    <p class="texto-tecnologias">
+                        <br>
+                        JavaScript, HTML/CSS, Angular, Material UI, C#, .NET, ASP.NET Core, Entity Framework, SQL
+                        Server, Microsoft Azure
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <a mat-button (click)="abrirDialogoDetalles(0)">Detalles</a>
+                    <a mat-button href="https://semanasieteapp.azurewebsites.net/pages/inicio" target="_blank">Página en
+                        línea</a>
+                </mat-card-actions>
+            </mat-card>
+        </li>
+
         <!-- Card Semana Mecatronica -->
         <li>
             <mat-card>
@@ -25,7 +55,7 @@
                     </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <a mat-button (click)="abrirDialogoDetalles(0)">Detalles</a>
+                    <a mat-button (click)="abrirDialogoDetalles(1)">Detalles</a>
                     <a mat-button href="https://github.com/AlanJafetRL/AppUsers" target="_blank">Repositorio</a>
                     <a mat-button
                         href="https://appsemanamecatronica-erfdhtf5g3g6a6fb.centralus-01.azurewebsites.net/pages/inicio"
@@ -57,7 +87,7 @@
                     </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <a mat-button (click)="abrirDialogoDetalles(1)">Detalles</a>
+                    <a mat-button (click)="abrirDialogoDetalles(2)">Detalles</a>
                     <a mat-button href="https://github.com/AlanJafetRL/AppSistemaVenta" target="_blank">Repositorio</a>
                     <a mat-button href="https://sistemaventaweb-hjd5f7dwgah9crfy.centralus-01.azurewebsites.net/"
                         target="_blank">
@@ -89,7 +119,7 @@
                     </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <a mat-button (click)="abrirDialogoDetalles(2)">Detalles</a>
+                    <a mat-button (click)="abrirDialogoDetalles(3)">Detalles</a>
                     <a mat-button href="https://github.com/AlanJafetRL/APISistemaVenta" target="_blank">Repositorio</a>
                 </mat-card-actions>
             </mat-card>
@@ -118,7 +148,7 @@
                     </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <a mat-button (click)="abrirDialogoDetalles(3)">Detalles</a>
+                    <a mat-button (click)="abrirDialogoDetalles(4)">Detalles</a>
                     <a mat-button href="https://github.com/AlanJafetRL/Portafolio" target="_blank">Repositorio</a>
                 </mat-card-actions>
             </mat-card>
