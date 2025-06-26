@@ -100,6 +100,10 @@ export class AppComponent implements AfterViewInit {
       linkWiki: 'https://es.wikipedia.org/wiki/C_Sharp'
     },
     {
+      label: 'JWT',
+      linkWiki: 'https://es.wikipedia.org/wiki/JSON_Web_Token'
+    },
+    {
       label: 'SQL',
       linkWiki: 'https://es.wikipedia.org/wiki/SQL'
     },

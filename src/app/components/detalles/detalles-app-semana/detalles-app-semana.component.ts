@@ -35,6 +35,14 @@ export const CAROUSEL_DATA_ITEMS: ICarouselItem[] = [
   {
     id: 7,
     image: 'assets/img/proyectos/app-semana7/07.jpeg'
+  },
+  {
+    id: 8,
+    image: 'assets/img/proyectos/app-semana7/08.jpeg'
+  },
+  {
+    id: 9,
+    image: 'assets/img/proyectos/app-semana7/09.jpeg'
   }
 ];
 
